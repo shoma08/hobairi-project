@@ -1,1 +1,21 @@
 /* ここに CSS のコードを書きましょう */
+.buttons button {
+  margin: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+ 
+.buttons button:hover {
+  background-color: #45a049;
+}
+ 
+#result {
+  margin-top: 30px;
+  font-size: 18px;
+  color: #333;
+}
