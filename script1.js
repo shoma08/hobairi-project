@@ -59,9 +59,9 @@ reserv.addEventListener("click", saveData);
         return;
       }
 
-      dataList.forEach((item, index) => {
+      dataList.forEach((item) => {
         const li = document.createElement('li');
-        li.textContent = `${index + 1}: ${item}`;
+        li.textContent = ` ${item}`;
         output.appendChild(li);
       });
     }
@@ -75,9 +75,14 @@ cancel.addEventListener("click", clearData)
     function clearData(){
     const data = JSON.parse(localStorage.getItem("savedData"));
     localStorage.clear();
+    if (number === "" ){
+      alert("キャンセルする名前の番号を入力してください")
+      return;
+    }
+    else{
     data.splice(Number(number.value) - 1, 1);
     localStorage.setItem("savedData", JSON.stringify(data));
-    
+    }
 
 
     // console.log(data)
